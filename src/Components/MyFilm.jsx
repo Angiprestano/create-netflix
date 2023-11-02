@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Row } from "react";
+import { Row } from "react-bootstrap";
 import SingleCard from "./SingleCard";
 
 class MyFilm extends Component {
@@ -19,11 +19,11 @@ class MyFilm extends Component {
         }
       })
       .then((data) => {
+        console.log(data);
         this.setState({
           movies: data.Search,
           isLoading: false,
         });
-        console.log(data);
       })
       .catch((error) => {
         console.error(error);
@@ -34,24 +34,20 @@ class MyFilm extends Component {
   render() {
     return (
       <div>
-        {this.state.isLoading ? (
-          <p>Loading...</p>
-        ) : this.state.isError ? (
+        {this.state.isLoading && <p>Loading...</p>}
+        {this.state.isError && (
           <p>C'è stato un errore durante il recupero dei dati.</p>
-        ) : (
-          <div>
-            <h1>Harry Potter</h1>
-            <Row>
-              {this.state.movies.map((movies) => (
-                <SingleCard
-                  key={movies.imdbID}
-                  title={movies.Title}
-                  poster={movies.Poster}
-                />
-              ))}
-            </Row>
-          </div>
         )}
+        :<h1 className="ms-5">Tv show</h1>
+        <Row>
+          {this.state.movies.map((movies) => (
+            <SingleCard
+              key={movies.imdID}
+              title={movies.Title}
+              poster={movies.Poster}
+            />
+          ))}
+        </Row>
       </div>
     );
   }

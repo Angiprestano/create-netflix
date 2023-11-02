@@ -1,9 +1,9 @@
-import { React, Col } from "react";
+import { React } from "react";
 
 const SingleCard = ({ poster }) => {
-  <Col className={1}>
+  <div className="col mb-2 text-center px-1">
     <img className="img-fluid" src={poster} alt="film" />
-  </Col>;
+  </div>;
 };
 
 export default SingleCard;
