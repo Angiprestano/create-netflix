@@ -1,9 +1,12 @@
 import { React } from "react";
+import { Col } from "react-bootstrap";
 
 const SingleCard = ({ poster }) => {
-  <div className="col mb-2 text-center px-1">
-    <img className="img-fluid" src={poster} alt="film" />
-  </div>;
+  return (
+    <Col className={1}>
+      <img className="img-fluid" src={poster} alt="film" />
+    </Col>
+  );
 };
 
 export default SingleCard;

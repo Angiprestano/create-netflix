@@ -2,14 +2,14 @@ import { React, Component } from "react";
 import { Row } from "react-bootstrap";
 import SingleCard from "./SingleCard";
 
-class MyFilm extends Component {
+class MyFilm3 extends Component {
   state = {
     movies: [],
     isLoading: true,
     isError: false,
   };
   componentDidMount() {
-    fetch("http://www.omdbapi.com/?apikey=695ba77a&s=harry%20potter")
+    fetch("http://www.omdbapi.com/?apikey=695ba77a&s=star wars")
       .then((res) => {
         if (res.ok) {
           console.log(res);
@@ -38,7 +38,7 @@ class MyFilm extends Component {
         {this.state.isError && (
           <p>C'è stato un errore durante il recupero dei dati.</p>
         )}
-        :<h3 className="ms-3 text-white">Harry Potter</h3>
+        :<h3 className="ms-3 text-white">Star Wars</h3>
         <Row>
           {this.state.movies.map((movies) => (
             <SingleCard
@@ -52,4 +52,4 @@ class MyFilm extends Component {
     );
   }
 }
-export default MyFilm;
+export default MyFilm3;
