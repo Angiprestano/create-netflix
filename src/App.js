@@ -7,17 +7,25 @@ import MyFilm2 from "./Components/MyFilm2";
 import MyFilm3 from "./Components/MyFilm3";
 import MyFilm4 from "./Components/MyFilm4";
 import MyFooter from "./Components/MyFooter";
+import TvShow from "./Components/TvShow";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="bg-dark">
       <header>
-        <MyNavbar />
-        <MyHome />
-        <MyFilm />
-        <MyFilm2 />
-        <MyFilm3 />
-        <MyFilm4 />
+        <BrowserRouter>
+          <MyNavbar />
+          <Routes>
+            <Route path="/" element={<MyHome />} />
+            <Route path="/tvshow" element={<TvShow />} />
+          </Routes>
+          <MyHome />
+          <MyFilm />
+          <MyFilm2 />
+          <MyFilm3 />
+          <MyFilm4 />
+        </BrowserRouter>
         <MyFooter />
       </header>
     </div>
