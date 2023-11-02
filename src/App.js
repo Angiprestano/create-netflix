@@ -19,14 +19,16 @@ function App() {
           <Routes>
             <Route path="/" element={<MyHome />} />
             <Route path="/tvshow" element={<TvShow />} />
+            <Route path="/" element={<MyFilm />} />
+            <Route path="/" element={<MyFilm2 />} />
+            <Route path="/" element={<MyFilm3 />} />
+            <Route path="/" element={<MyFilm4 />} />
           </Routes>
-          <MyHome />
-          <MyFilm />
           <MyFilm2 />
           <MyFilm3 />
           <MyFilm4 />
+          <MyFooter />
         </BrowserRouter>
-        <MyFooter />
       </header>
     </div>
   );

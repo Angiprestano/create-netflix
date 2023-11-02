@@ -7,25 +7,30 @@ function MyNavbar() {
   return (
     <Navbar expand="lg" className="bg-dark">
       <Container>
-        <img src="../assets/logo.png" alt="logo" style={{ width: "118px" }} />
+        <img
+          src="../assets/logo.png"
+          alt="logo"
+          style={{ width: "118px" }}
+          className="me-4"
+        />
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/" className="text-secondary">
+            <Link to="/" className="text-secondary me-3 mt-2">
               Home
             </Link>
-            <Link to="/tvshow" className="text-secondary">
+            <Link to="/tvshow" className="text-secondary me-2 mt-2">
               Tv Shows
             </Link>
-            <Link to="/" className="text-secondary">
+            <Nav.Link href="#link" className="text-secondary me-2">
               Recently Added
-            </Link>
-            <Link to="/" className="text-secondary">
+            </Nav.Link>
+            <Nav.Link href="#link" className="text-secondary me-3">
               Added
-            </Link>
-            <Link to="/" className="text-secondary">
+            </Nav.Link>
+            <Nav.Link href="#link" className="text-secondary">
               My List
-            </Link>
+            </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#link">

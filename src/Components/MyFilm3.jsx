@@ -38,8 +38,8 @@ class MyFilm3 extends Component {
         {this.state.isError && (
           <p>C'è stato un errore durante il recupero dei dati.</p>
         )}
-        :<h3 className="ms-3 text-white">Star Wars</h3>
-        <Row>
+        :<h3 className="ms-2 mb-3 text-white">Star Wars</h3>
+        <Row className="ms-2">
           {this.state.movies.map((movies) => (
             <SingleCard
               key={movies.imdID}

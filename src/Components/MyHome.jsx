@@ -15,10 +15,6 @@ const MyHome = () => {
           <NavDropdown.Item href="#action/3.3">Thriller</NavDropdown.Item>
         </NavDropdown>
       </div>
-      <Nav className="text-white justify-content-between ">
-        <i class="bi bi-grid text-black" />
-        <i class="bi bi-grid-3x3" />
-      </Nav>
     </Container>
   );
 };
